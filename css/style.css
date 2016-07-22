@@ -1,0 +1,25 @@
+body {
+	background-color: FireBrick;
+}
+h1 {
+	text-align: center;
+	font-size: 3rem;
+}
+h2 {
+	text-align: center;
+	font-size: 2rem;
+}
+
+	
+.mainContainer {
+	width: 60rem;
+	height:30rem;
+	margin: 2rem 14rem 2rem;
+	background-image: url('../images/library background.jpg');
+	background-size: cover;
+	
+} 
+.quote {
+	text-align:center;
+	font-size: 1.5rem;
+}
