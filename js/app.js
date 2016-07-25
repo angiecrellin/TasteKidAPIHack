@@ -1,9 +1,9 @@
 $(function() {
 
-    $('#search').submit(function(event) {
+    $('#authorBook').submit(function(event) {
         event.preventDefault();
         var searchTerm = $('#authorBook').val();
-        getRequest(searchTerm);
+        getRecommends(searchTerm);
 
 
     });
@@ -17,7 +17,7 @@ var getRecommends = function(searchTerm) {
         info: 1,
         limit: 10
     };
-    var url = 'https://www.tastekid.com/api/similar?q={searchTerm}+{type}+{k}+{info}+{limit}'
+    var url = 'https://www.tastekid.com/api/similar?q={searchTerm}%2C+{type}%2C+{k}%2C+{info}%2C+{limit}'
         .replace('{searchTerm}', recommends.searchTerm)
         .replace('{type}', recommends.type)
         .replace('{k}', recommends.k)
@@ -31,7 +31,7 @@ var getRecommends = function(searchTerm) {
 
     })
     console.log(data);
-    
 
-   
+
+
 }
