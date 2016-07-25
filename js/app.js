@@ -17,7 +17,7 @@ var getRecommends = function(searchTerm) {
         info: 1,
         limit: 10
     };
-    /*var url = 'https://www.tastekid.com/api/similar?q={searchTerm}+{type}+{k}+{info}+{limit}'
+    var url = 'https://www.tastekid.com/api/similar?q={searchTerm}+{type}+{k}+{info}+{limit}'
         .replace('{searchTerm}', recommends.searchTerm)
         .replace('{type}', recommends.type)
         .replace('{k}', recommends.k)
@@ -26,18 +26,12 @@ var getRecommends = function(searchTerm) {
 
     $.ajax({
         url: url,
-        dataType: 'json',
+        dataType: 'jsonp',
         type: 'GET',
 
-
-
     })
-    console.log(data);*/
+    console.log(data);
+    
 
-    url = 'https://www.tastekid.com/api/similar?q=';
-
-    $.getJSON(url, recommends, function(data) {
-
-        console.log(data);
-    });
+   
 }
