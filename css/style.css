@@ -1,6 +1,6 @@
 body {
     background-color: CadetBlue;
-}
+    }
 
 h1 {
     text-align: center;
@@ -28,7 +28,37 @@ h2 {
     border-radius: 4px;
     font-size: 1rem;
     text-align: center;
-    margin: 15rem;
+    margin: 8rem 15rem;
+    font-weight: bold;
+}
+
+.samples {
+    width: 30rem;
+    height: 9rem;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-radius: 4px;
+    font: 1rem BlinkMacSystemFont;
+    text-align: center;
+    margin: 0rem 15rem;
+    padding: 1px;
+    background-color: white;
+    color: grey;
+
+
+}
+h3 {
+    font-weight: normal;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+}
+a {
+    text-decoration: none;
 }
 
 .quote {
