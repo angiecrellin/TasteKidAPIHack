@@ -6,7 +6,6 @@ $(function() {
         getRecommends(searchTerm);
         //$('#authorBook').val('')
         $('.search').get(0).reset()
-        hideCard();
 
 
     });
@@ -43,14 +42,12 @@ var getRecommends = function(searchTerm) {
         type: 'GET',
         success: function(response) {
             console.log(response)
-            showCard();
             showResults(response.Similar.Results);
             hideLoader();
         },
         error: function(response) {
             console.error(response)
             hideLoader();
-
 
 
 
@@ -83,13 +80,7 @@ var getRecommends = function(searchTerm) {
         $('#loading').hide()
     }
 
-    function showCard() {
-        $('.card').show()
-    }
 
-    function hideCard() {
-        $('.card').hide()
-    }
 
 
 
