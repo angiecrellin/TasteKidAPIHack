@@ -11,7 +11,7 @@ $(function() {
 
     });
 
-    $('.sampleLink').on('click', function(event){
+    $('.sampleLink').on('click', function(event) {
         event.preventDefault();
         var searchTerm = $(this).data('term')
         getRecommends(searchTerm)
@@ -19,76 +19,78 @@ $(function() {
 })
 
 var getRecommends = function(searchTerm) {
-        showLoader();
-        var recommends = {
-            q: (searchTerm),
-            type: 'books',
-            k: '233130-AngieCre-H73O8G3C',
-            info: 1,
-            limit: 10
-        };
-        /*var url = 'https://www.tastekid.com/api/similar?q={searchTerm}&type={type}&k={k}&info={info}&limit={limit}'
-            .replace('{searchTerm}', recommends.q)
-            .replace('{type}', recommends.type)
-            .replace('{k}', recommends.k)
-            .replace('{info}', recommends.info)
-            .replace('{limit}', recommends.limit)*/
+    showLoader();
+    var recommends = {
+        q: (searchTerm),
+        type: 'books',
+        k: '233130-AngieCre-H73O8G3C',
+        info: 1,
+        limit: 10
+    };
+    /*var url = 'https://www.tastekid.com/api/similar?q={searchTerm}&type={type}&k={k}&info={info}&limit={limit}'
+        .replace('{searchTerm}', recommends.q)
+        .replace('{type}', recommends.type)
+        .replace('{k}', recommends.k)
+        .replace('{info}', recommends.info)
+        .replace('{limit}', recommends.limit)*/
 
-        var url = 'https://www.tastekid.com/api/similar'
+    var url = 'https://www.tastekid.com/api/similar'
 
-        $.ajax({
-            url: url,
-            dataType: 'jsonp',
-            data: recommends,
-            type: 'GET',
-            success: function(response) {
-                console.log(response)
-                showCard();
-                showResults(response.Similar.Results);
-                hideLoader();
-            },
-            error: function(response) {
-                console.error(response)
-                hideLoader();
+    $.ajax({
+        url: url,
+        dataType: 'jsonp',
+        data: recommends,
+        type: 'GET',
+        success: function(response) {
+            console.log(response)
+            showCard();
+            showResults(response.Similar.Results);
+            hideLoader();
+        },
+        error: function(response) {
+            console.error(response)
+            hideLoader();
 
 
-                
 
-            }
 
+        }
+
+    })
+
+
+
+
+
+    function showResults(results) {
+        var html = "";
+        $.each(results, function(index, value) {
+
+            html += '<h2>' + value.Name + '</h2>';
+            html += '<p>' + value.wTeaser + '</p>'
+            html += '<a href>' + value.wUrl + '</a>'
         })
+        $('#search-results').html(html);
+    }
 
 
 
+    function showLoader() {
+        $('#loading').show()
+    }
 
-        
-        function showResults(results) {
-            var html = "";
-            $.each(results, function(index, value) {
+    function hideLoader() {
+        $('#loading').hide()
+    }
 
-                html += '<h2>' + value.Name + '</h2>';
-                html += '<p>' + value.wTeaser + '</p>'
-                html += '<a href>' + value.wUrl + '</a>'
-            })
-           $('#search-results').html(html); 
-        }
+    function showCard() {
+        $('.card').show()
+    }
+
+    function hideCard() {
+        $('.card').hide()
+    }
 
 
-        
-        function showLoader(){
-            $('#loading').show()
-        }
-        function hideLoader(){
-            $('#loading').hide()
-        }
 
-        function showCard(){
-            $('.card').show()
-        }
-        function hideCard() {
-            $('.card').show()
-        }
-        
-
-       
 }
