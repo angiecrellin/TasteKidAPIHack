@@ -20,19 +20,21 @@
         <div class ='samples'>
             <h4>Sample Searches</h4>
             <ul>
-            <li><a href = 'https://www.tastekid.com/api/similar?q=john+green&k=233130-AngieCre-H73O8G3C&type=book&info=1&limit=5'>John Green</a></li>
-            <li><a href = 'https://www.tastekid.com/api/similar?q=rick+riordan&k=233130-AngieCre-H73O8G3C&type=book&info=1&limit=5'>Rick Riordan</a></li>
-            <li><a href = 'https://www.tastekid.com/api/similar?q=Redwall&k=233130-AngieCre-H73O8G3C&type=book&info=1&limit=5'>Redwall</a></li>
-            <li><a href = 'https://www.tastekid.com/api/similar?q=Little+Women&k=233130-AngieCre-H73O8G3C&type=book&info=1&limit=5'>Little Women</a></li>
+            <li><a data-term = 'John Green' href = '#' class = 'sampleLink'>John Green</a></li>
+            <li><a data-term = 'Rick Riordan' href = '#' class = 'sampleLink'>Rick Riordan</a></li>
+            <li><a data-term = 'Redwall' href = '#' class = 'sampleLink'>Redwall</a></li>
+            <li><a data-term = 'Little Women' href = '#' class = 'sampleLink'>Little Women</a></li>
             </ul>
     </section>
     <div id='search-results'>
+        <div class = card></div>
     </div>
     <footer class='quote'>
         <p>There is no Friggate like a Book
             <br> To take us Lands away,
             <br> <em>Emily Dickinson (1830-1886)</em></p>
     </footer>
+    <div id="loading"></div>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="js/app.js"></script>
 </body>

@@ -6,12 +6,20 @@ $(function() {
         getRecommends(searchTerm);
         //$('#authorBook').val('')
         $('.search').get(0).reset()
+        hideCard();
 
 
     });
+
+    $('.sampleLink').on('click', function(event){
+        event.preventDefault();
+        var searchTerm = $(this).data('term')
+        getRecommends(searchTerm)
+    })
 })
 
 var getRecommends = function(searchTerm) {
+        showLoader();
         var recommends = {
             q: (searchTerm),
             type: 'books',
@@ -35,12 +43,16 @@ var getRecommends = function(searchTerm) {
             type: 'GET',
             success: function(response) {
                 console.log(response)
+                showCard();
+                showResults(response.Similar.Results);
+                hideLoader();
             },
             error: function(response) {
                 console.error(response)
+                hideLoader();
 
 
-                // showResults(data.items);
+                
 
             }
 
@@ -49,30 +61,34 @@ var getRecommends = function(searchTerm) {
 
 
 
-        //html not defined
-        /*function showResults(results) {
+        
+        function showResults(results) {
             var html = "";
             $.each(results, function(index, value) {
 
-                html += '<h2>' + value.name + '</h2>';
+                html += '<h2>' + value.Name + '</h2>';
                 html += '<p>' + value.wTeaser + '</p>'
                 html += '<a href>' + value.wUrl + '</a>'
             })
+           $('#search-results').html(html); 
         }
 
-        $('#search-results').html(html);
 
-        }*/
+        
+        function showLoader(){
+            $('#loading').show()
+        }
+        function hideLoader(){
+            $('#loading').hide()
+        }
 
-        //showSearchResults not defined
-        /*.done(function(results) {
-        searchResults = showSearchResults(recommends.q, results.items.length);
+        function showCard(){
+            $('.card').show()
+        }
+        function hideCard() {
+            $('.card').show()
+        }
+        
 
-        $('#search-results').html(searchResults);
-        $.each(results.items, function(i, item) {
-
-            var recommends = showUsers(item);
-            $('#search-results').append(recommends);
-        });
-    });*/
+       
 }
