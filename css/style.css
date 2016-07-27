@@ -15,25 +15,26 @@ h2 {
 }
 
 .mainContainer {
-    width: 60rem;
+    width: 80%;
     height: 30rem;
-    margin: 2rem 14rem 2rem;
+    margin: 2rem auto 2rem;
     background-image: url('../images/library background.jpg');
     background-size: cover;
+    text-align:center;
 }
 
 #authorBook {
-    width: 30rem;
+    width: 80%;
     height: 2rem;
     border-radius: 4px;
     font-size: 1rem;
     text-align: center;
-    margin: 8rem 15rem;
+    margin: 8rem auto;
     font-weight: bold;
 }
 
 .samples {
-    width: 30rem;
+    width: 50%;
     height: 9rem;
     border-width: 2px;
     border-style: inset;
@@ -41,7 +42,7 @@ h2 {
     border-radius: 4px;
     font: 1rem BlinkMacSystemFont;
     text-align: center;
-    margin: 0rem 15rem;
+    margin: 0rem auto;
     padding: 1px;
     background-color: white;
     color: grey;
@@ -58,16 +59,15 @@ ul {
 
 a {
     text-decoration: none;
-}
-.results {
-    width: 50%;
-    margin: 0 auto;
+
 }
 
 #search-results {
     width: 50%;
     margin: 0 auto;
 }
+
+
 
 .quote {
     text-align: center;
@@ -86,3 +86,8 @@ a {
     background-color: rgba(255, 255, 255, 0.2);
     display: none;
 }
+
+
+
+
+

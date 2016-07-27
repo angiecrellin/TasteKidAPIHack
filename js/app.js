@@ -62,10 +62,12 @@ var getRecommends = function(searchTerm) {
     function showResults(results) {
         var html = "";
         $.each(results, function(index, value) {
+            html += '<div class = resultItem>'
 
             html += '<h2>' + value.Name + '</h2>';
             html += '<p>' + value.wTeaser + '</p>'
-            html += '<a href>' + value.wUrl + '</a>'
+            html += '<a href ="' + value.wUrl + '">' +  value.wUrl + '</a>'
+            html += '</div>'
         })
         $('#search-results').html(html);
     }
