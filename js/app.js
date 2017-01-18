@@ -66,7 +66,7 @@ var getRecommends = function(searchTerm) {
 
             html += '<h2>' + value.Name + '</h2>';
             html += '<p>' + value.wTeaser + '</p>'
-            html += '<a href ="' + value.wUrl + '">' +  value.wUrl + '</a>'
+            html += '<a href ="' + value.wUrl + '">' + value.wUrl + '</a>'
             html += '</div>'
         })
         $('#search-results').html(html);

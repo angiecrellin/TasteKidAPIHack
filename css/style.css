@@ -1,5 +1,5 @@
 body {
-    background-color: CadetBlue;
+    background-color: #1E8B9B;
 }
 
 h1 {
@@ -18,9 +18,13 @@ h2 {
     width: 80%;
     height: 30rem;
     margin: 2rem auto 2rem;
-    background-image: url('../images/library background.jpg');
-    background-size: cover;
+    // background-image: url('../images/library background.jpg');
+    // background-size: cover;
+    background-color: #D4c229;
     text-align:center;
+    border: 5px solid #DE4E40;
+    border-radius: 5px;
+
 }
 
 #authorBook {
@@ -65,6 +69,15 @@ a {
 #search-results {
     width: 50%;
     margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.resultItem {
+    margin: 75px;
+    padding: 75px 50px;
+    background: #D4c229;
+    border: 5px solid #DE4E40; 
+    border-radiux: 5px;  
 }
 
 
