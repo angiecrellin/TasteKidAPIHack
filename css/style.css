@@ -66,6 +66,8 @@ a {
 
 }
 
+
+
 #search-results {
     width: 50%;
     margin: 0 auto;
@@ -77,7 +79,7 @@ a {
     padding: 75px 50px;
     background: #D4c229;
     border: 5px solid #DE4E40; 
-    border-radiux: 5px;  
+    border-radius: 5px;  
 }
 
 
@@ -86,6 +88,16 @@ a {
     text-align: center;
     font-size: 1.5rem;
 }
+
+.backButton {
+    background: #D4c229;
+    border: 2px solid #DE4E40;
+    border-radius: 2px;
+    color: black;
+    width: 200px;
+    cursor: pointer;
+}
+
 
 #loading {
     position: fixed;
