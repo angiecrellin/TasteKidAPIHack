@@ -1,17 +1,20 @@
 body {
-    background-color: #1E8B9B;
+    background-color: #26C6DA;
+    font-family: 'Lora', serif;
 }
 
 h1 {
     text-align: center;
     font-size: 3rem;
-    text-shadow: lightgrey 2px 2px;
+    // text-shadow: lightgrey 2px 2px;
+    color: #006064;
 }
 
 h2 {
     text-align: center;
     font-size: 2rem;
-    text-shadow: lightgrey 1px 1px;
+    // text-shadow: lightgrey 1px 1px;
+    color: #006064;
 }
 
 .mainContainer {
@@ -20,36 +23,72 @@ h2 {
     margin: 2rem auto 2rem;
     // background-image: url('../images/library background.jpg');
     // background-size: cover;
-    background-color: #D4c229;
+    background-color: #80DEEA;
     text-align:center;
-    border: 5px solid #DE4E40;
+    border: 5px solid #00838F;
     border-radius: 5px;
 
 }
 
 #authorBook {
     width: 80%;
-    height: 2rem;
+    height: 3rem;
+    background-color: #E0F7FA;
+    border: 2px solid #00838F;
     border-radius: 4px;
+    margin: 8rem auto;
+    
+}
+
+::-webkit-input-placeholder {
+    color: #00838F;
+    // border-radius: 4px;
     font-size: 1rem;
     text-align: center;
-    margin: 8rem auto;
+    // margin: 8rem auto;
+    font-weight: bold;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #00838F;
+    // border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+    // margin: 8rem auto;
+    font-weight: bold;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #00838F;
+    // border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+    // margin: 8rem auto;
+    font-weight: bold;
+}
+
+:-ms-input-placeholder {  
+    color: #00838F;
+    // border-radius: 4px;
+    font-size: 1rem;
+    text-align: center;
+    // margin: 8rem auto;
     font-weight: bold;
 }
 
 .samples {
     width: 50%;
     height: 9rem;
-    border-width: 2px;
-    border-style: inset;
+    background-color: #E0F7FA;
+    border: 2px solid #00838F;
+    // border-style: inset;
     border-color: initial;
     border-radius: 4px;
     font: 1rem BlinkMacSystemFont;
     text-align: center;
-    margin: 0rem auto;
+    margin: -2.5rem auto;
     padding: 1px;
-    background-color: white;
-    color: grey;
+    color: #00838F;
 }
 
 h3 {
@@ -63,13 +102,14 @@ ul {
 
 a {
     text-decoration: none;
+    color: #26C6DA;
 
 }
 
 
 
 #search-results {
-    width: 50%;
+    width: 80%;
     margin: 0 auto;
     padding-bottom: 15px;
 }
@@ -77,8 +117,8 @@ a {
 .resultItem {
     margin: 75px;
     padding: 75px 50px;
-    background: #D4c229;
-    border: 5px solid #DE4E40; 
+    background: #E0F7FA;
+    border: 5px solid #00838F; 
     border-radius: 5px;  
 }
 
@@ -87,13 +127,15 @@ a {
 .quote {
     text-align: center;
     font-size: 1.5rem;
+    color: #006064;
 }
 
 .backButton {
-    background: #D4c229;
-    border: 2px solid #DE4E40;
-    border-radius: 2px;
-    color: black;
+    background-color: #E0F7FA;
+    border: 2px solid #00838F;
+    border-radius: 4px;
+    color: #00838F;
+    font-weight: bold;
     width: 200px;
     cursor: pointer;
 }
