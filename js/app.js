@@ -5,7 +5,7 @@ $(function() {
         var searchTerm = $('#authorBook').val();
         getRecommends(searchTerm);
         //$('#authorBook').val('')
-        $('.search').get(0).reset()
+        $('.search').get(0).reset();
 
 
     });
@@ -69,17 +69,22 @@ var getRecommends = function(searchTerm) {
             html += '<a href ="' + value.wUrl + '">' + value.wUrl + '</a>'
             html += '</div>'
         })
+
         $('#search-results').html(html);
+
+
+
+
     }
 
 
 
     function showLoader() {
-        $('#loading').show()
+        $('.icon-spin5').show()
     }
 
     function hideLoader() {
-        $('#loading').hide()
+        $('.icon-spin5').hide()
     }
 
 

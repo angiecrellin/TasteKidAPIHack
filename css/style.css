@@ -1,20 +1,25 @@
+body, input, button {
+    font-family: 'Source Sans Pro', sans-serif;
+}
 body {
-    background-color: #26C6DA;
-    font-family: 'Lora', serif;
+    // background-color: #26C6DA;
+    background-color: #00BCD4;
 }
 
 h1 {
     text-align: center;
     font-size: 3rem;
     // text-shadow: lightgrey 2px 2px;
-    color: #006064;
+    color: #fff;
+    font-family: 'Lora', serif;
 }
 
 h2 {
     text-align: center;
     font-size: 2rem;
     // text-shadow: lightgrey 1px 1px;
-    color: #006064;
+    color: #fff;
+    font-family: 'Lora', serif;
 }
 
 .mainContainer {
@@ -33,10 +38,12 @@ h2 {
 #authorBook {
     width: 80%;
     height: 3rem;
-    background-color: #E0F7FA;
+    background-color: #fff;
     border: 2px solid #00838F;
     border-radius: 4px;
     margin: 8rem auto;
+    font-size: 1rem;
+    text-align: center;
     
 }
 
@@ -79,12 +86,11 @@ h2 {
 .samples {
     width: 50%;
     height: 9rem;
-    background-color: #E0F7FA;
+    background-color: #fff;
     border: 2px solid #00838F;
     // border-style: inset;
     border-color: initial;
     border-radius: 4px;
-    font: 1rem BlinkMacSystemFont;
     text-align: center;
     margin: -2.5rem auto;
     padding: 1px;
@@ -117,41 +123,51 @@ a {
 .resultItem {
     margin: 75px;
     padding: 75px 50px;
-    background: #E0F7FA;
+    background: #fff;
     border: 5px solid #00838F; 
     border-radius: 5px;  
 }
 
+.resultItem h2 {
+    color: #00838F;
+}
 
 
 .quote {
+
     text-align: center;
     font-size: 1.5rem;
     color: #006064;
+    padding-bottom: 20px;
+    font-family: 'Lora', serif;
+
 }
 
 .backButton {
-    background-color: #E0F7FA;
+    margin-top: 30px;
+    background-color: #fff;
     border: 2px solid #00838F;
     border-radius: 4px;
     color: #00838F;
     font-weight: bold;
     width: 200px;
     cursor: pointer;
+    font-size: 11px;
 }
 
 
-#loading {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(../images/loading.gif);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-    display: none;
+// #loading {
+    .icon-spin5:before { content: '\e838'; }
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // width: 100vw;
+    // height: 100vh;
+    // background-image: url(../images/loading.gif);
+    // background-repeat: no-repeat;
+    // background-position: 50% 50%;
+    // background-color: rgba(255, 255, 255, 0.2);
+    // display: none;
 }
 
 
