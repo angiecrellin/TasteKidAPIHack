@@ -7,6 +7,9 @@
     <title>Book Search</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link href="https://fonts.googleapis.com/css?family=Lora|Source+Sans+Pro" rel="stylesheet">
+     <link rel="stylesheet" href="css/fontello/fontello.css">
+     <link rel="stylesheet" href="css/fontello/animation.css">
+
     <link rel="stylesheet" href="css/style.css" />
 </head>
 
@@ -29,7 +32,12 @@
                 <li><a data-term='Little Women' href='#' class='sampleLink'>Little Women</a></li>
             </ul>
     </section>
-    <div id='search-results'></div>
+    <div id="loading">
+        <i class="icon-spin5 animate-spin"></i>
+    </div>
+    <div id='search-results'>
+        
+    </div>
     <footer class='quote'>
         <ul>
             <li>There is no Friggate like a Book</li>
@@ -37,9 +45,6 @@
             <li><em>Emily Dickinson (1830-1886)</em></li>
         <a href="https://angiecrellin.github.io/portfolio-site/"><button class="backButton">Angie's Portfolio Site</button></a>
     </footer>
-    <div id="loading">
-        <i class="icon-spin3 animate-spin"></i>
-    </div>
     <script src="//code.jquery.com/jquery.min.js"></script>
     <script src="js/app.js"></script>
 </body>
