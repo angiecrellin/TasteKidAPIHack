@@ -3,14 +3,21 @@ $(function() {
     $('.search').submit(function(event) {
         event.preventDefault();
         var searchTerm = $('#authorBook').val();
+        $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
         getRecommends(searchTerm);
         //$('#authorBook').val('')
         $('.search').get(0).reset();
 
 
+
     });
 
     $('.sampleLink').on('click', function(event) {
+        $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
         event.preventDefault();
         var searchTerm = $(this).data('term')
         getRecommends(searchTerm)
