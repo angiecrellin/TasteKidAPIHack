@@ -3,6 +3,10 @@ $(function() {
     $('.search').submit(function(event) {
         event.preventDefault();
         var searchTerm = $('#authorBook').val();
+        if (searchTerm == "") {
+        alert("Please Enter Your Favorite Book or Author");
+        return false;
+        }
         $('html,body').animate({
         scrollTop: $(".second").offset().top},
         'slow');
