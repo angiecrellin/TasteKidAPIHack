@@ -1,3 +1,5 @@
+
+
 body,
 input,
 button {
@@ -173,12 +175,18 @@ a {
 }
 
 @media only screen and (max-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+
     h1 {
         font-size: 2rem;
+        padding: 0 1rem;
     }
     
     h2 {
         font-size: 1.5rem;
+        padding: 0 1rem;
     }
     
     li {
